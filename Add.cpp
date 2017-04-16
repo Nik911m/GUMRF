@@ -1,25 +1,28 @@
-///Добавить абонента
+///Г„Г®ГЎГ ГўГЁГІГј Г ГЎГ®Г­ГҐГ­ГІГ 
 #include "includes.h"
 #include "STRUCT.h"
 
 void Add()
 {
-	ofstream outFile;		//Создание объекта для ввода
-	string filename = "ATS.txt"; //Имя файла
-	outFile.open(filename, std::ios_base::app); //Ассоциирование его с файлом
-	//"ios_base::app" - Открыть файл, указатель записи в конец файла
-	cout << "Добавление нового абонента: "<<endl;
+	SetConsoleCP(1251); //РљРѕРґРёСЂРѕРІРєР° 1251
+	SetConsoleOutputCP(1251);
+
+	ofstream outFile;		//Г‘Г®Г§Г¤Г Г­ГЁГҐ Г®ГЎГєГҐГЄГІГ  Г¤Г«Гї ГўГўГ®Г¤Г 
+	string filename = "ATS.txt"; //Г€Г¬Гї ГґГ Г©Г«Г 
+	outFile.open(filename, std::ios_base::app); //ГЂГ±Г±Г®Г¶ГЁГЁГ°Г®ГўГ Г­ГЁГҐ ГҐГЈГ® Г± ГґГ Г©Г«Г®Г¬
+	//"ios_base::app" - ГЋГІГЄГ°Г»ГІГј ГґГ Г©Г«, ГіГЄГ Г§Г ГІГҐГ«Гј Г§Г ГЇГЁГ±ГЁ Гў ГЄГ®Г­ГҐГ¶ ГґГ Г©Г«Г 
+	cout << "Г„Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г­Г®ГўГ®ГЈГ® Г ГЎГ®Г­ГҐГ­ГІГ : "<<endl;
 	outFile << endl;
-	cout << "Фамилия: " << endl;
+	cout << "Г”Г Г¬ГЁГ«ГЁГї: " << endl;
 	string temp;
 	cin >> temp;
 	outFile << temp << endl;
-	cout << "Номер телефона: " << endl;
+	cout << "ГЌГ®Г¬ГҐГ° ГІГҐГ«ГҐГґГ®Г­Г : " << endl;
 	cin >> temp;
 	outFile << temp << endl;
-	cout << "Время разговора:" << endl;
+	cout << "Г‚Г°ГҐГ¬Гї Г°Г Г§ГЈГ®ГўГ®Г°Г :" << endl;
 	cin >> temp;
 	outFile << temp;
-	outFile.close(); //Завершить работу с файлом
+	outFile.close(); //Г‡Г ГўГҐГ°ГёГЁГІГј Г°Г ГЎГ®ГІГі Г± ГґГ Г©Г«Г®Г¬
 	cout << " " << endl;
 }
